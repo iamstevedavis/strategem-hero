@@ -1,0 +1,24 @@
+{
+  "name": "strategem-hero",
+  "version": "0.0.1",
+  "description": "A web based strategem hero implementation from Helldivers II!",
+  "main": "index.ts",
+  "scripts": {
+    "build": "rm -r dist && tsc && npm run copyfiles",
+    "copyfiles": "copyfiles -u 1 \"src/public/**/*\" dist",
+    "dev": "rm -r dist && tsc && npm run copyfiles && node ./dist/index.js",
+    "start": "node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "copyfiles": "^2.4.1",
+    "typescript": "^5.4.5"
+  }
+}
