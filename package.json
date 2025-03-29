@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rm -r dist && tsc && npm run copyfiles",
     "copyfiles": "copyfiles -u 1 \"src/public/**/*\" dist",
-    "dev": "rm -r dist && tsc && npm run copyfiles && node ./dist/index.js",
+    "dev": "tsc --watch & nodemon --watch dist --exec \"node ./dist/index.js\"",
     "start": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,8 +17,13 @@
     "fastify": "^4.27.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.23.0",
     "@types/node": "^20.12.12",
     "copyfiles": "^2.4.1",
-    "typescript": "^5.4.5"
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^8.28.0"
   }
 }

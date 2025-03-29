@@ -24,6 +24,7 @@ body {
 
 #sequence-container img {
   opacity: 0.5;
+  transition: opacity 0.3s ease; /* Smooth transition for opacity changes */
 }
 
 #timer, #score {
@@ -48,3 +49,4 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
